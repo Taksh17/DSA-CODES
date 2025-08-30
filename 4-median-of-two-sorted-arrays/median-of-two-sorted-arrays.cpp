@@ -7,7 +7,7 @@ public:
         int i=0;
         int j=0;
         while(i<n1 and j<n2){
-            if(nums1[i]<nums2[j]){
+            if(nums1[i]<=nums2[j]){
                 result.push_back(nums1[i]);
                 i++;
             }
@@ -15,12 +15,7 @@ public:
                 result.push_back(nums2[j]);
                 j++;
             }
-            else{
-                result.push_back(nums1[i]);
-                result.push_back(nums2[j]);
-                i++;
-                j++;
-            }
+    
         }
           while (i < n1) {
         result.push_back(nums1[i]);
@@ -34,7 +29,7 @@ public:
      if (len % 2 == 1) {
         return result[len/ 2]; 
     } else {
-        return (result[len/ 2 - 1] + result[len / 2]) / 2.0; // average of two middle
+        return (result[len/ 2 - 1] + result[len / 2]) / 2.0; 
     }
         
     }
