@@ -6,7 +6,7 @@ public:
         for(int i=0;i<s.size();i++){
             mp.clear();
             for(int j=i;j<s.size();j++){
-                char &ch=s[j];
+                char ch=s[j];
                 mp[ch]++;
                 int mini=INT_MAX;
                 int maxi=INT_MIN;
