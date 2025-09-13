@@ -5,13 +5,10 @@ public:
         for(int i=0;i<nums.size();i++){
             mp[nums[i]]++;
         }
-        for(auto it:mp){
-            if(it.first==target){
-                return true;
-            }
-        }
-        return false;
-
+       if(mp.find(target)!=mp.end()){
+        return true;
+       }
+       return false;
         
     }
 };
