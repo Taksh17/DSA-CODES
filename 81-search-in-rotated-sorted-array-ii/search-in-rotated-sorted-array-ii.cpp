@@ -23,7 +23,7 @@ public:
             }
             else if(nums[m]<=nums[e]){
                 if(nums[m]<=target and target<=nums[e]){
-                    s=m+1;;
+                    s=m+1;
                 }
                 else{
                 e=m-1;
