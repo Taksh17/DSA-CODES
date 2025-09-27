@@ -23,9 +23,6 @@ int getlength(ListNode* head){
         if(head==nullptr){
             return head;
         }
-        if(head->next==nullptr){
-            return head;
-        }
         int len=getlength(head);
         if(len<k){
             return head;
