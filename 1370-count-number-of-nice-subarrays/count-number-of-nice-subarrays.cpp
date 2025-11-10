@@ -1,26 +1,24 @@
 class Solution {
 public:
-int atmost(vector<int>& nums, int k){
-    int left=0;
-    int countodd=0;
-    int res=0;
-    for(int i=0;i<nums.size();i++){
-        if(nums[i]%2){
-            countodd++;
-        }
-            while(countodd>k){
-                if(nums[left]%2){
-                    countodd--;
-                }
-                left++;
+    int atMost(vector<int>& nums, int k) {
+        int l=0;
+        int r=0;
+        int res=0;
+        for(int r=0;r<nums.size();r++){
+            if(nums[r]%2==1){
+                k--;
             }
-            res+=(i-left+1);
+            while(k<0){
+                if(nums[l]%2==1){
+                    k++;
+                }
+                l++;
+            }
+            res+=r-l+1;
+        }
+        return res;
     }
-    return res;
-
-}
-    int numberOfSubarrays(vector<int>& nums, int k) {
-        return atmost(nums, k) - atmost(nums, k - 1);
-        
+         int numberOfSubarrays(vector<int>& nums, int k) {
+        return atMost(nums, k) - atMost(nums, k - 1);
     }
 };
