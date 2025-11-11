@@ -32,7 +32,6 @@ public:
                 l++;
             }
         }
-
         return minLen == INT_MAX ? "" : s.substr(start, minLen);
         
     }
