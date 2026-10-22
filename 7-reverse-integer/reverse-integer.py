@@ -14,9 +14,7 @@ class Solution(object):
             digit=x%10
             ans=ans*10+digit
             x=x//10
-        ans=ans*sign
-        if(ans<-(2**31) or ans>2**31-1):
+        if(ans>2**31-1 or ans<(-2**31)):
             return 0
         else:
-            return ans
-
+            return ans*sign
