@@ -5,12 +5,10 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        a=[]
+        a={}
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                sum=nums[i]+nums[j]
-                if(sum==target):
-                    a.append(i)
-                    a.append(j)
-
-        return a
+            compliment=target-nums[i]
+            if compliment in a:
+                return[i,a[compliment]]
+            else:
+                a[nums[i]]=i
