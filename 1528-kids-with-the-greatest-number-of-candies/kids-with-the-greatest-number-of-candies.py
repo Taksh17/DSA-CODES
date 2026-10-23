@@ -8,16 +8,14 @@ class Solution(object):
         ans=[]
         l=len(candies)
         maxi=candies[0]
-        for i in range(0,l):
+        for i in range(l):
             if(candies[i]>maxi):
                 maxi=candies[i]
-        
         var=0
-        for j in range(0,l):
-            var=candies[j]+extraCandies
+        for j in range(l):
+            var=extraCandies+candies[j]
             if(var>=maxi):
                 ans.append(True)
             else:
                 ans.append(False)
         return ans
-        
