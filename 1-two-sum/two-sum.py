@@ -5,10 +5,12 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        a={}
+        d1={}
+        c=0
         for i in range(len(nums)):
-            compliment=target-nums[i]
-            if compliment in a:
-                return[i,a[compliment]]
+            c=target-nums[i]
+            if c in d1:
+                return[i,d1[c]]
             else:
-                a[nums[i]]=i
+                d1[nums[i]]=i
+        return d1        
