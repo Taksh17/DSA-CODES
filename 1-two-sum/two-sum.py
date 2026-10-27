@@ -6,11 +6,11 @@ class Solution(object):
         :rtype: List[int]
         """
         d1={}
-        c=0
         for i in range(len(nums)):
-            c=target-nums[i]
-            if c in d1:
-                return[i,d1[c]]
+            v=target-nums[i]
+            if v in d1:
+                return [i,d1[v]]
             else:
                 d1[nums[i]]=i
-        return d1        
+
+
