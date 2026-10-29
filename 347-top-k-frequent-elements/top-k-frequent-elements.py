@@ -11,6 +11,6 @@ class Solution(object):
                 d1[nums[i]]+=1
             else:
                 d1[nums[i]]=1
-        a=sorted(d1,key=lambda x:d1[x],reverse=True)
+        a=sorted(d1,key=lambda x :d1[x],reverse=True)
         return a[:k]
         
