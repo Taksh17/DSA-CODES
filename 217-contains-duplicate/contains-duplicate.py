@@ -6,11 +6,9 @@ class Solution(object):
         """
         a=set()
         for i in range(len(nums)):
-            if(nums[i] in a):
+            if nums[i] in a:
                 return True
             else:
                 a.add(nums[i])
         return False
-                
-
         
