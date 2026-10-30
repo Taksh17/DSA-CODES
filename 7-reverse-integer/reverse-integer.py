@@ -4,17 +4,16 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        ans=0
-        digit=0
         sign=1
-        if x<0:
+        if(x<0):
             sign=-1
             x=-x
+        ans=0
         while(x>0):
-            digit=x%10
-            ans=ans*10+digit
+            d=x%10
+            ans=ans*10+d
             x=x//10
-        if(ans>2**31-1 or ans<(-2**31)):
+        if(ans>2**31-1) or (ans<-2**31):
             return 0
         else:
             return ans*sign
