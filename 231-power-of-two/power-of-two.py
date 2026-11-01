@@ -1,6 +1,5 @@
 class Solution(object):
     def isPowerOfTwo(self, n):
-
         """
         :type n: int
         :rtype: bool
@@ -9,7 +8,6 @@ class Solution(object):
         while(2**i<=n):
             if(2**i==n):
                 return True
-            else:
-                i+=1
+            i+=1
         return False
-         
+        
