@@ -5,14 +5,11 @@ class Solution(object):
         :rtype: List[List[str]]
         """
         d1={}
-        for i in strs:
-            s=''.join(sorted(i))
-            if s in d1:
-                d1[s].append(i)
+        for i in range(len(strs)):
+            v=''.join(sorted(strs[i]))
+            if v in d1:
+                d1[v].append(strs[i])
             else:
-                d1[s]=[i]
-        return list(d1.values())
-        
-
-        
+                d1[v]=[strs[i]]
+        return d1.values()
         
