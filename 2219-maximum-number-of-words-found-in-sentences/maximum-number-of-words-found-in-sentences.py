@@ -4,13 +4,11 @@ class Solution(object):
         :type sentences: List[str]
         :rtype: int
         """
-        count=0
         maxi=0
-        l=len(sentences)
-        for i in range(l):
-            count=len(sentences[i].split())
-            if count>maxi:
-                maxi=count
+        for i in range(len(sentences)):
+            v=len(sentences[i].split())
+            if(v>maxi):
+                maxi=v
         return maxi
-       
-          
+
+        
