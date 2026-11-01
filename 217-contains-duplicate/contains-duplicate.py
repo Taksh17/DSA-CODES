@@ -4,11 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        a=set()
+        d1={}
         for i in range(len(nums)):
-            if nums[i] in a:
-                return True
+            if nums[i] in d1:
+                d1[nums[i]]+=1
             else:
-                a.add(nums[i])
+                d1[nums[i]]=1
+        for key,values in d1.items():
+            if values>1:
+                return True
         return False
         
