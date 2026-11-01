@@ -12,5 +12,5 @@ class Solution(object):
                 return [i,d1[v]]
             else:
                 d1[nums[i]]=i
-
-
+            
+        
