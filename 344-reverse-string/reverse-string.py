@@ -10,5 +10,4 @@ class Solution(object):
             s[l],s[r]=s[r],s[l]
             l+=1
             r-=1
-            
         
