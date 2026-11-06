@@ -7,12 +7,12 @@ class Solution(object):
         """
         i=0
         j=0
-        while(j<len(nums)):
-            if(nums[j]==val):
-                j+=1
+        while(i<len(nums)):
+            if(nums[i]==val):
+                i+=1
             else:
-                nums[i]=nums[j]
+                nums[j],nums[i]=nums[i],nums[j]
                 i+=1
                 j+=1
-        return i
+        return j
         
