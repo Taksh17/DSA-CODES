@@ -21,7 +21,7 @@ class Solution(object):
                 l=m+1
             else:
                 r=m
-        return l
+        return r
 
 
            
