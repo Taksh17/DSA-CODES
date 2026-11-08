@@ -5,20 +5,19 @@ class Solution(object):
         :type target: int
         :rtype: bool
         """
-        m=len(matrix)
-        n=len(matrix[0])
-        l=0
-        r=m*n-1
-        while(l<=r):
-            mid=l+(r-l)//2
-            row=mid//n
-            col=mid%n
+        l=len(matrix)
+        c=len(matrix[0])
+        s=0
+        e=l*c-1
+        while(s<=e):
+            m=s+(e-s)//2
+            row=m//c
+            col=m%c
             if(matrix[row][col]==target):
                 return True
             elif(matrix[row][col]>target):
-                r=mid-1
+                e=m-1
             else:
-                l=mid+1
+                s=m+1
         return False
-
         
