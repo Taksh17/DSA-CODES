@@ -4,9 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        mini=max(nums)
-        for i in range(len(nums)):
-            if(nums[i]<mini):
-                mini=nums[i]
-        return mini
+        s=0
+        e=len(nums)-1
+        while(s<e):
+            m=s+(e-s)//2
+            if(nums[m]>nums[e]):
+                s=m+1
+            else:
+                e=m
+        return nums[e]
+
+
         
+            
