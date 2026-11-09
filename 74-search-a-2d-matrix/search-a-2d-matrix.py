@@ -5,10 +5,10 @@ class Solution(object):
         :type target: int
         :rtype: bool
         """
-        l=len(matrix)
+        r=len(matrix)
         c=len(matrix[0])
         s=0
-        e=l*c-1
+        e=r*c-1
         while(s<=e):
             m=s+(e-s)//2
             row=m//c
@@ -20,4 +20,3 @@ class Solution(object):
             else:
                 s=m+1
         return False
-        
