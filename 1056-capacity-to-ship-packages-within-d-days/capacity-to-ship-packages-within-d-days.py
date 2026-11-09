@@ -5,23 +5,22 @@ class Solution(object):
         :type days: int
         :rtype: int
         """
-        l=max(weights)
-        r=sum(weights)
-        while(l<r):
-            m=l+(r-l)//2
+        s=max(weights)
+        e=sum(weights)
+        while(s<e):
+            m=s+(e-s)//2
             total=0
-            day=1
+            d=1
             for i in range(len(weights)):
                 if(total+weights[i]>m):
-                    day+=1
                     total=weights[i]
+                    d+=1
                 else:
                     total+=weights[i]
-            if(day>days):
-                l=m+1
+            if(d>days):
+                s=m+1
             else:
-                r=m
-        return r
-
-
+                e=m
+        return e
+            
         
