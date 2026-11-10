@@ -4,9 +4,15 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums.sort()
-        l=len(nums)
-        ans=0
-        i=l//2
-        ans=nums[i]
-        return ans        
+        candidate=0
+        c=0
+        for i in range(len(nums)):
+            if(c==0):
+                candidate=nums[i]
+            if(nums[i]==candidate):
+                c+=1
+            else:
+                c-=1
+        return candidate
+
+        
