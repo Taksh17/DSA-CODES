@@ -15,7 +15,4 @@ class Solution(object):
                 else:
                     ans-=d[s[i]]
         return ans
-
-   
-
-        
+       
