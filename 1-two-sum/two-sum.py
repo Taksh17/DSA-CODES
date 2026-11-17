@@ -5,12 +5,10 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        d1={}
+        d={}
         for i in range(len(nums)):
             v=target-nums[i]
-            if v in d1:
-                return [i,d1[v]]
+            if v in d:
+                return [i,d[v]]
             else:
-                d1[nums[i]]=i
-            
-        
+                d[nums[i]]=i
