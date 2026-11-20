@@ -5,19 +5,19 @@ class Solution(object):
         :type word2: str
         :rtype: str
         """
-        i=0
-        j=0
-        s=""
-        while(i<len(word1) and j<len(word2)):
-            s=s+word1[i]
-            i+=1
-            s=s+word2[j]
-            j+=1
-        while(i<len(word1)):
-            s=s+word1[i]
-            i+=1
-        while(j<len(word2)):
-            s=s+word2[j]
-            j+=1
-        return s
+        s=0
+        f=0
+        ans=""
+        while(s<len(word1) and f<len(word2)):
+            ans+=word1[s]
+            s+=1
+            ans+=word2[f]
+            f+=1
+        while(s<len(word1)):
+            ans+=word1[s]
+            s+=1
+        while(f<len(word2)):
+            ans+=word2[f]
+            f+=1
+        return ans
         
