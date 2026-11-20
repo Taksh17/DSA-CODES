@@ -4,15 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        ans=[0]*len(nums)
         l=0
         r=len(nums)-1
-        for i in range(len(nums)):
-            if(nums[i]%2==0):
-                ans[l]=nums[i]
+        while(l<=r):
+            if(nums[l]%2==0 and nums[r]%2==0):
                 l+=1
-            else:
-                ans[r]=nums[i]
+            elif(nums[l]%2!=0 and nums[r]%2==0):
+                nums[l],nums[r]=nums[r],nums[l]
+                l+=1
                 r-=1
-        return ans
+            else:
+                r-=1
+        return nums
         
