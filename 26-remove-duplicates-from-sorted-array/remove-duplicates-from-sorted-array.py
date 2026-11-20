@@ -4,17 +4,15 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        i=0
-        j=0
-        while(j<len(nums)):
-            if(nums[i]==nums[j]):
-                j+=1
-            else:
-                i+=1
-                nums[i]=nums[j]
-                j+=1
-        return i+1
-
-           
+        s=0
+        f=0
+        while(f<len(nums)):
+            if(nums[s]==nums[f]):
+                f+=1
+            elif(nums[s]!=nums[f]):
+                s+=1
+                nums[s],nums[f]=nums[f],nums[s]
+                f+=1
+        return s+1
 
         
