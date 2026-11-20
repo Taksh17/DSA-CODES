@@ -6,14 +6,15 @@ class Solution(object):
         """
         sign=1
         if(x<0):
-            sign=-1
-            x=-x
-        ans=0
+            sign=-sign
+            x=x*-1
+        a=0
         while(x>0):
             d=x%10
-            ans=ans*10+d
+            a=a*10+d
             x=x//10
-        if(ans>2**31-1) or (ans<-2**31):
+        if(a<-(2**31) or a> 2**31-1):
             return 0
         else:
-            return ans*sign
+            return a*sign
+        
