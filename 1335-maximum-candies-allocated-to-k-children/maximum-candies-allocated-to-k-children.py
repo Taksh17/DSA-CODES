@@ -19,5 +19,4 @@ class Solution(object):
             else:
                 e=m-1
         return ans
-
         
