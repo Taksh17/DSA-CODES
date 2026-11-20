@@ -1,20 +1,19 @@
 class Solution(object):
-    def twoSum(self, nums, target):
+    def twoSum(self, numbers, target):
         """
         :type numbers: List[int]
         :type target: int
         :rtype: List[int]
         """
-        l=0
-        r=len(nums)-1
-        while(l<r):
-            sum=nums[l]+nums[r]
-            if(sum==target):
-                return [l+1,r+1]
-            elif(sum>target):
-                r-=1
+        s=0
+        e=len(numbers)-1
+        ans=[]
+        while(s<e):
+            if(numbers[s]+numbers[e]==target):
+                return [s+1,e+1]
+            elif(numbers[s]+numbers[e]>target):
+                e-=1
             else:
-                l+=1
+                s+=1
         return []
-
         
