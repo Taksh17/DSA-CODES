@@ -5,15 +5,14 @@ class Solution(object):
         :type extraCandies: int
         :rtype: List[bool]
         """
-        l=len(candies)
-        maxi=0
-        ans=[]
-        for i in range(l):
+        maxi=candies[0]
+        for i in range(len(candies)):
             if(candies[i]>maxi):
                 maxi=candies[i]
-        for j in range(l):
-            var=candies[j]+extraCandies
-            if(var>=maxi):
+        ans=[]
+        for i in range(len(candies)):
+            v=candies[i]+extraCandies
+            if(v>=maxi):
                 ans.append(True)
             else:
                 ans.append(False)
