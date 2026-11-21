@@ -6,7 +6,7 @@ class Solution(object):
         """
         s=set()
         for i in range(len(nums)):
-            if nums[i] in s:
+            if(nums[i])  in s:
                 return True
             else:
                 s.add(nums[i])
