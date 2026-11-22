@@ -5,14 +5,13 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        i=0
-        j=0
-        while(i<len(nums)):
-            if(nums[i]==val):
-                i+=1
+        s=0
+        f=0
+        while(f<len(nums)):
+            if(nums[f]==val):
+                f+=1
             else:
-                nums[j],nums[i]=nums[i],nums[j]
-                i+=1
-                j+=1
-        return j
-        
+                nums[s],nums[f]=nums[f],nums[s]
+                s+=1
+                f+=1
+        return s
