@@ -5,14 +5,11 @@ class Solution(object):
         :rtype: str
         """
         s=s.split()
-        ans=""
+        ans=[]
         for i in range(len(s)):
-            ans+=s[i][::-1]
-            if(i!=len(s)-1):
-                ans+=" "
-        return ans
+            v=s[i][::-1]
+            ans.append(v)
+        return " ".join(ans)
 
-            
-
-
+        
         
