@@ -12,11 +12,8 @@ class Solution(object):
                 s=m+2
             elif(m%2==0 and nums[m]!=nums[m+1]):
                 e=m
-            elif(m%2==1 and nums[m]==nums[m-1]):
-                s=m+1
-            else:
+            elif(m%2!=0 and nums[m]==nums[m+1]):
                 e=m
+            else:
+                s=m+1
         return nums[e]
-
-
-        
