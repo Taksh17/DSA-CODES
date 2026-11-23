@@ -4,7 +4,7 @@ class Solution(object):
         :type num: int
         :rtype: bool
         """
-        if(num<2):
+        if(num<=1):
             return True
         s=1
         e=num//2
@@ -17,4 +17,3 @@ class Solution(object):
             else:
                 s=m+1
         return False
-        
