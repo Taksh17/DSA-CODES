@@ -7,10 +7,11 @@ class Solution(object):
         """
         s=max(weights)
         e=sum(weights)
-        while(s<e):
+        ans=0
+        while(s<=e):
             m=s+(e-s)//2
-            total=0
             d=1
+            total=0
             for i in range(len(weights)):
                 if(total+weights[i]>m):
                     total=weights[i]
@@ -20,7 +21,9 @@ class Solution(object):
             if(d>days):
                 s=m+1
             else:
-                e=m
-        return e
-            
+                ans=m
+                e=m-1
+        return ans
+
+                
         
