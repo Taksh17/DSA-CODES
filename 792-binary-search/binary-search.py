@@ -5,15 +5,14 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        l=0
-        r=len(nums)-1
-        while(l<=r):
-            m=l+(r-l)//2
+        s=0
+        e=len(nums)-1
+        while(s<=e):
+            m=s+(e-s)//2
             if(nums[m]==target):
                 return m
             elif(nums[m]>target):
-                r=m-1
+                e=m-1
             else:
-                l=m+1
-        return -1
-        
+                s=m+1
+        return -1        
