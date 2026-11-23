@@ -8,12 +8,13 @@ class Solution(object):
         e=len(nums)-1
         while(s<e):
             m=s+(e-s)//2
-            if(m%2==0 and nums[m]==nums[m+1]):
+            if(m %2==0 and nums[m]==nums[m+1]):
                 s=m+2
-            elif(m%2==0 and nums[m]!=nums[m+1]):
+            elif(m%2==0 and nums[m]!=nums[m+1] ):
                 e=m
             elif(m%2!=0 and nums[m]==nums[m+1]):
                 e=m
             else:
                 s=m+1
         return nums[e]
+        
