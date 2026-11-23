@@ -5,26 +5,20 @@ class Solution(object):
         :type h: int
         :rtype: int
         """
-        l=1
-        r=max(piles)
+        s=1
+        e=max(piles)
         ans=0
-        while(l<r):
-            m=l+(r-l)//2
+        while(s<=e):
+            m=s+(e-s)//2
             total=0
             for i in range(len(piles)):
-               if(piles[i]%m==0):
-                hrs=piles[i]//m
-               else:
-                hrs=piles[i]//m+1
-               total+=hrs            
+                if(piles[i]%m==0):
+                    total+=piles[i]//m
+                else:
+                    total+=piles[i]//m+1
             if(total>h):
-                l=m+1
+               s=m+1
             else:
-                r=m
-        return r
-
-
-           
-
-            
-        
+                ans=m
+                e=m-1
+        return ans
