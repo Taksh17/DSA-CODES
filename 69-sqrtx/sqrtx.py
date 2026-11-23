@@ -4,11 +4,11 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        s=0
+        if(x<=1):
+            return x
+        s=1
         e=x//2
         ans=0
-        if(x<2):
-            return x
         while(s<=e):
             m=s+(e-s)//2
             if(m*m==x):
@@ -19,5 +19,4 @@ class Solution(object):
                 ans=m
                 s=m+1
         return ans
-
         
