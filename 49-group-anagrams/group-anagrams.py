@@ -4,12 +4,12 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        d1={}
+        d={}
         for i in range(len(strs)):
-            v=''.join(sorted(strs[i]))
-            if v in d1:
-                d1[v].append(strs[i])
+            v=sorted(strs[i])
+            p="".join(v)
+            if(p) in d:
+                d[p].append(strs[i])
             else:
-                d1[v]=[strs[i]]
-        return d1.values()
-        
+                d[p]=[strs[i]]  
+        return d.values()     
