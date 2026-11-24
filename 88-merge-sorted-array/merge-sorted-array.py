@@ -15,13 +15,12 @@ class Solution(object):
                 nums1[k]=nums1[i]
                 k-=1
                 i-=1
-            elif(nums2[j]>nums1[i]):
+            else:
                 nums1[k]=nums2[j]
                 j-=1
                 k-=1
         while(j>=0):
             nums1[k]=nums2[j]
-            j-=1
             k-=1
-
-        
+            j-=1
+            
