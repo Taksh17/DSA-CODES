@@ -7,9 +7,9 @@ class Solution(object):
         for i in range(len(board)):
             a=set()
             for j in range(len(board)):
-                if board[i][j]==".":
+                if(board[i][j]=="."):
                     continue
-                elif( board[i][j]) in a:
+                elif(board[i][j]) in a:
                     return False
                 else:
                     a.add(board[i][j])
@@ -24,15 +24,14 @@ class Solution(object):
                     b.add(board[j][i])
         for i in range(0,9,3):
             for j in range(0,9,3):
-                c=set()
+                s=set()
                 for k in range(3):
                     for l in range(3):
-                        if( board[i+k][j+l]=="."):
+                        if(board[i+k][j+l]=="."):
                             continue
-                        elif( board[i+k][j+l]) in c:
+                        elif(board[i+k][j+l]) in s:
                             return False
                         else:
-                            c.add( board[i+k][j+l])
+                            s.add(board[i+k][j+l])
         return True
-
         
