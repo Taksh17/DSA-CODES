@@ -12,13 +12,8 @@ class Solution(object):
         prev=None
         curr=head
         while(curr is not None):
-            next=curr.next
+            nxt=curr.next
             curr.next=prev
             prev=curr
-            curr=next
+            curr=nxt
         return prev
-
-
-
-
-        
