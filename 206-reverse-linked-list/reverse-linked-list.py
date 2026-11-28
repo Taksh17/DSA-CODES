@@ -17,3 +17,4 @@ class Solution(object):
             prev=curr
             curr=nxt
         return prev
+        
